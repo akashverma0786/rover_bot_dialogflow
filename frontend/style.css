@@ -1,0 +1,46 @@
+/* Greyish or off-white background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Off-white or greyish */
+}
+
+/* Container for the chatbot and title */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rover title positioned over the chatbot container */
+.rover-title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Impact", "Arial Black", sans-serif;
+    color: #333;
+    text-shadow: 2px 2px 5px #888;
+    letter-spacing: 2px;
+    position: absolute;
+    top: -100px; /* Adjust to move it above the chatbot container */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensures title stays on top of the chatbot */
+}
+
+/* Center the chatbot iframe */
+.chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
