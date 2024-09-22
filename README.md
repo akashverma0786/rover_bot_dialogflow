@@ -103,3 +103,6 @@ To integrate the chatbot with your frontend, follow these steps:
    ```
 5. Save the index.html file.
 6. Go to your PC where your project folder is located, navigate to the frontend folder, and run the index.html file.
+
+# 10. Watch the rover bot running :-
+[Video of functioning Rover](https://drive.google.com/file/d/1zbdUONPrHdaWS87wjawfyBcm1NrwwM5Z/view?usp=sharing)
