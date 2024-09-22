@@ -4,12 +4,6 @@ from database.db_creds import connection
 
 import mysql.connector
 
-# connection = mysql.connector.connect(
-#     host='localhost',
-#     user='root',
-#     password='rish0515',
-#     # database='billionaires'
-# )
 
 cursor = connection.cursor()
 
@@ -67,12 +61,11 @@ for year, table in zip(years_list[:-10], tables[:-11]):
         print(individual_data)
         if len(columns) == len(head_titles):
             age_value = columns[3].text.strip()
-            age = int(age_value) if age_value.isdigit() else None   # Ensure the number of columns matches
+            age = int(age_value) if age_value.isdigit() else None
             values = [
                 int(columns[0].text.strip()),  # No.
                 columns[1].text.strip(),  # Name
                 columns[2].text.strip().replace(',', '').replace('$', ''),  # Net worth
-                # int(columns[3].text.strip()),  # Age
                 age,
                 columns[4].text.strip(),  # Nationality
                 columns[5].text.strip()   # Primary source
@@ -83,7 +76,7 @@ for year, table in zip(years_list[:-10], tables[:-11]):
             '''
             cursor.execute(insert_query, values)
 
-    connection.commit()  # Commit the changes after each year
+    connection.commit()  
 
 cursor.close()
 connection.close()

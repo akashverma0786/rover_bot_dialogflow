@@ -5,7 +5,7 @@
 To clone the repository, use the following command:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/akashverma0786/rover_bot_dialogflow.git
 ```
 # 2. Install Requirements
 

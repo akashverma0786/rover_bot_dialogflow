@@ -58,7 +58,7 @@ def db_get_details_from_name(name : str):
     FROM billionaires_2024
     WHERE LOWER(name) LIKE LOWER(CONCAT('%', %s , '%'));
     """
-    # cursor.execute(query)
+
     cursor.execute(query, (name,))
     result = cursor.fetchone()
     cursor.close()
@@ -75,13 +75,12 @@ def db_get_details_from_year(name : str, year :int):
 
     table_name = f"billionaires_{year}"
 
-    # Use parameterized query for the 'name' part to prevent SQL injection
     query = f"""
     SELECT No, Name, Net_worth_USD
     FROM {table_name}
     WHERE LOWER(name) LIKE LOWER(CONCAT('%', %s , '%'));
     """
-    # cursor.execute(query)
+
     cursor.execute(query, (name,))
     result = cursor.fetchone()
     cursor.close()
